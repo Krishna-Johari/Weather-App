@@ -20,6 +20,7 @@ A full-stack weather application built with React and Express that displays real
 ## 🚀 How to Run the Project
 
 ### 🔹 Backend
+
 cd backend
 npm install
 npm run start
@@ -27,6 +28,7 @@ npm run start
 👉 Runs on: http://localhost:5000
 
 ### 🔹 Frontend
+
 cd frontend
 npm install
 npm run dev
@@ -35,17 +37,20 @@ npm run dev
 
 
 ## 🔐 Environment Variables
+
 Create a .env file inside the backend folder:
 OPENWEATHER_API_KEY=YOUR_API_KEY
 PORT=5000
 
 
 ## ⚠️ Note
+
 .env file is not included in the repository
 Replace YOUR_API_KEY with your OpenWeather API key
 
 
 ## 📁 Project Structure
+
 weather-app/
  ├── backend/
  ├── frontend/
@@ -53,6 +58,7 @@ weather-app/
 
 
 ## ✨ Features
+
 Search weather by city, state, country
 Displays temperature, humidity, and wind speed
 Clean UI with weather icons
