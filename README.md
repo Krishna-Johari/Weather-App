@@ -5,7 +5,9 @@ A full-stack weather application built with React and Express that displays real
 
 ## 📸 Preview
 
-![Weather App](./frontend/src/Components/assets/preview.png)
+<p align="center">
+  <img src="./frontend/src/Components/assets/preview.png" alt="Weather App" />
+</p>
 
 
 ## ⚙️ Tech Stack
@@ -17,70 +19,42 @@ A full-stack weather application built with React and Express that displays real
 
 ## 🚀 How to Run the Project
 
-### 🔹 1. Clone the repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/weather-app.git
-cd weather-app
-```
-
-
-### 🔹 2. Backend Setup
+### 🔹 Backend
 
 ```bash
 cd backend
 npm install
 npm run start
-```
 
-👉 Backend runs on:  
-http://localhost:5000
+👉 Runs on: http://localhost:5000
 
-
-### 🔹 3. Frontend Setup
-
-Open a new terminal:
-
+### 🔹 Frontend
 ```bash
 cd frontend
 npm install
 npm run dev
-```
 
-👉 Frontend runs on:  
-http://localhost:5173
+👉 Runs on: http://localhost:5173
 
-
-## 🔐 Environment Variables
-
-Create a `.env` file inside the **backend** folder:
-
-```env
+### 🔐 Environment Variables
+Create a .env file inside the backend folder:
 OPENWEATHER_API_KEY=YOUR_API_KEY
 PORT=5000
-```
 
 
 ## 📁 Project Structure
-
-```bash
 weather-app/
  ├── backend/
  ├── frontend/
- ├── assets/
  ├── README.md
-```
 
 
 ## ⚠️ Notes
-
-- `.env` file is not included in the repository
-- Replace `YOUR_API_KEY` with your OpenWeather API key
-- Country-level search may not always return accurate results
+.env file is not included in the repository
+Replace YOUR_API_KEY with your OpenWeather API key
 
 
 ## ✨ Features
-
-- Search weather by city
-- Displays temperature, humidity, and wind speed
-- Clean UI with weather icons
+Search weather by city, state, country
+Displays temperature, humidity, and wind speed
+Clean UI with weather icons
