@@ -21,9 +21,8 @@ const WeatherApp = () => {
         return;
       }
 
-      // ✅ CALL BACKEND (NO API KEY HERE)
-      let url = `http://localhost:5000/api/weather?city=${element[0].value}`;
-
+      let url = `https://api.openweathermap.org/data/2.5/weather?q=${element[0].value}&units=metric&appid=YOUR_API_KEY`;
+      
       let response = await fetch(url);
       let data = await response.json();
 
