@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors({
   origin: "*",
-  methods: ["GET", "POST"],
+  methods: ["GET"],
   allowedHeaders: ["Content-Type"]
 }));
 
@@ -18,7 +18,9 @@ app.get('/api/weather', async (req, res) => {
   const city = req.query.city;
   const apiKey = process.env.OPENWEATHER_API_KEY;
 
-  if (!city) return res.status(400).json({ error: 'City is required' });
+  if (!city) {
+    return res.status(400).json({ error: 'City is required' });
+  }
 
   try {
     const response = await fetch(
@@ -27,17 +29,20 @@ app.get('/api/weather', async (req, res) => {
 
     const data = await response.json();
 
-    if (data.cod == 200) {
-      res.json(data);
+    if (data.cod === 200 || data.cod === "200") {
+      return res.json(data);
     } else {
-      res.status(data.cod).json({ error: data.message });
+      return res.status(400).json({
+        error: data.message || "City not found"
+      });
     }
 
   } catch (err) {
-    res.status(500).json({ error: 'Server error' });
+    console.error(err); 
+    return res.status(500).json({ error: 'Server error' });
   }
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
