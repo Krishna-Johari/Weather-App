@@ -21,7 +21,7 @@ const WeatherApp = () => {
         return;
       }
 
-      let url = `https://api.openweathermap.org/data/2.5/weather?q=${element[0].value}&units=metric&appid=YOUR_API_KEY`;
+      let url = `https://weather-app-5m4b.onrender.com/api/weather?city=${element[0].value}`;
       
       let response = await fetch(url);
       let data = await response.json();
